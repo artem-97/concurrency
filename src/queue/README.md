@@ -1,6 +1,8 @@
 ## Condvar based concurrent queue
 
+**API:**
 ```cpp
-Channel<std::function<void(void)>> channel;
-channel.send([](){std::cout << 1;})
+Queue<int> queue;
+queue.push_back(42);
+int val = queue.pop_front();
 ```
